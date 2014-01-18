@@ -1,0 +1,13 @@
+/*
+ Theme Name:   wp301 andy thurston
+ Theme URI:    http://wpedu.jameshurstofficial.com/wp301ep01/
+ Description:  wp301ep01: Twenty Fourteen Child Theme
+ Author:       Andy Thurston
+ Author URI:   http://profile.jameshurstofficial.com
+ Template:     twentyfourteen
+ Version:      1.0.0
+*/
+
+@import url("../twentyfourteen/style.css");
+
+.site {background-color: #ABBB91}
