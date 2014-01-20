@@ -1,2 +1,1 @@
-<?php // functions.php ?>
-
+<?php

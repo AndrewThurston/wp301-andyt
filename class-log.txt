@@ -1,0 +1,20 @@
+== 1.0 ==
+01.20.14
+@randyh
+====================
+
+Review: Error from functions.php
+---------------------
+Some developers like to leave the closing php ?> at the end of their php files. I personally do not for the exact reason that this file caused a problem. 
+
+The issue with the functions.php file was that you had white space after your closing php tag. This white space, which is nothing more than a new line or a space, will be read by the server and interpreted as the beginning of the served up web page. This results in errors such as the following. 
+
+### Error from white space in the funcitons.php file
+Warning: Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/wpedu-class/wp-content/themes/wp301-andyt/functions.php:3) in /Applications/MAMP/htdocs/wpedu-class/wp-includes/pluggable.php on line 896
+
+
+Review: File usage
+---------------------
+Keep you theme clean even during development. If you don't have a need for a file than remove it. If you are using it as a reference I  suggest that you append something on the end such as functions-sample.php This will keep the actual functions.php and the functions-sample.php right next to each other.
+
+If a file is not longer needed it should be removed, though you may leave files during development as a reference. You should never leave extra files in your themes after they have been launched, including css, image and a variety of others.
