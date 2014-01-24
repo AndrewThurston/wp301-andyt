@@ -1,8 +1,12 @@
 <?php
 
 /*
-Template Name: Custom Page One
+Template Name: Custom Page Gamma
+Description: Scratchy to say the least
 */
+
+echo "This should display as the template";
+
 
 get_header(); ?>
 
