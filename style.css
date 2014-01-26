@@ -11,3 +11,7 @@
 @import url("../twentyfourteen/style.css");
 
 .site {background-color: #ABBB91}
+
+.disclaimer {
+	color:red;
+}

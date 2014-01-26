@@ -12,14 +12,19 @@
 	<?php
 		// Page thumbnail and title.
 		twentyfourteen_post_thumbnail();
-		the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' );
+		the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1><!-- .entry-header -->' );
+		if(is_page_template('tmp-custom-page-alpha.php')){
+				echo the_field('secondary_title');
+			}
 	?>
 
 	<div class="entry-content">
+		
+			<span class="disclaimer"> <?php the_field('disclaimer_text'); ?></span>
+			<img src=" <?php the_field('secondary_featured_image'); ?>" />
+			<hr>
+
 		<?php
-			if(is_page_template('tmp-custom-page-alpha.php') AND get_post_meta( $post->ID, 'secondary-title', true )){
-				echo get_post_meta($post->ID, 'secondary-title', true);
-			}
 			the_content();
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
